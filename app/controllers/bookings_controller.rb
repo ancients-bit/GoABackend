@@ -40,7 +40,8 @@ class BookingsController < ApplicationController
       :number_of_persons,
       :date_of_booking,
       :alternate_date,
-      :inquiry
+      :inquiry,
+      :service
     )
   end
 

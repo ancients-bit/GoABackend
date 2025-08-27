@@ -36,6 +36,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_14_123314) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "reset_code_digest"
+    t.datetime "reset_code_sent_at"
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
@@ -62,6 +64,18 @@ ActiveRecord::Schema[8.0].define(version: 2025_07_14_123314) do
     t.date "date_of_booking"
     t.integer "status"
     t.date "alternate_date"
+    t.string "service"
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string "full_name", null: false
+    t.string "email", null: false
+    t.string "phone_number"
+    t.string "organization"
+    t.string "subject"
+    t.text "message", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "subscribers", force: :cascade do |t|
