@@ -1,0 +1,117 @@
+.admin-login-container {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #033d1d 0%, #6b3f16 60%, #033d1d 100%);
+  margin: 0;
+  padding: 0;
+}
+
+.admin-login-card {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 32px rgba(0, 0, 0, 0.12);
+  width: 350px;
+  max-width: 90vw;
+  margin: 0;
+}
+
+.login-header-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.dashboard-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 14px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.dashboard-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #333;
+  line-height: 1.2;
+}
+
+.login-heading {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #555;
+}
+
+.field {
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.field label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.field input[type="email"],
+.field input[type="password"] {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #d3d3dd;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.field.remember-me {
+  display: flex;
+  align-items: center;
+  text-align: left;
+}
+
+.field.remember-me label {
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+}
+
+.actions input[type="submit"] {
+  width: 100%;
+  padding: 0.8rem;
+  background: #2d5f35;
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background 0.2s;
+}
+
+.actions input[type="submit"]:hover {
+  background: #4020bf;
+}
+
+.login-links {
+  margin-top: 1.2rem;
+  text-align: left;
+}
+
+.login-links a {
+  color: #2d5f35;
+  text-decoration: none;
+  margin: 0 0.5rem 0 0;
+}
+
+.login-links a:hover {
+  text-decoration: underline;
+}
+body {
+  margin: 0 !important;
+  padding: 0;
+}

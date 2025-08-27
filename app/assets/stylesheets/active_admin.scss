@@ -1,0 +1,101 @@
+.custom-admin-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f4faf7;
+}
+
+.sidebar-nav {
+  width: 230px;
+  background: #fff;
+  border-right: 1.5px solid #e5e7eb;
+  box-shadow: 2px 0 16px rgba(16,60,80,.04);
+  display: flex;
+  flex-direction: column;
+  padding-top: 28px;
+}
+
+.sidebar-header {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #047857;
+  display: flex;
+  align-items: center;
+  padding-left: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.logo {
+  width: 36px; height: 36px; background: #047857; color: #fff;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-weight: bold; font-size: 1.2rem; margin-right: 0.8rem;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0 1rem;
+  margin: 0;
+}
+.sidebar-menu li {
+  margin: 16px 0;
+}
+.sidebar-menu a {
+  text-decoration: none;
+  color: #22223b;
+  font-size: 1.08rem;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 8px 14px;
+  display: block;
+  transition: background 0.15s;
+}
+.sidebar-menu a.active, .sidebar-menu a:hover {
+  background: #e0f2f1;
+  color: #047857;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2.5rem 2.2rem;
+}
+@import "active_admin/mixins";
+@import "active_admin/base";
+
+body.active_admin {
+  background: #f4faf7;
+  font-family: 'Inter', Arial, sans-serif;
+}
+.panel {
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(16,60,80,.07);
+  padding: 2rem;
+  background: #fff;
+  margin-bottom: 2rem;
+}
+.panel h2 {
+  color: #047857;
+  font-size: 2.2rem;
+  margin-bottom: 0.2rem;
+}
+.button.green {
+  background: #047857;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+  margin-right: 0.4rem;
+}
+.button.red {
+  background: #ef4444;
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.3rem 1rem;
+}
+.sidebar_section {
+  background: #eef5ee;
+  color: #047857;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+  padding: 1rem;
+}
+/*
+ *= require active_admin/base
+ *= require active_admin_custom
+ */

@@ -1,0 +1,64 @@
+/* app/assets/stylesheets/active_admin_custom.css */
+
+body.active_admin_devise {
+  background: linear-gradient(135deg, #374151 0%, #0f766e 100%);
+  min-height: 100vh;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+#active_admin_content .container {
+  background: white;
+  max-width: 380px;
+  margin: 48px auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 48px rgba(18, 40, 77, 0.12);
+  padding: 2rem 2.5rem;
+  text-align: center;
+}
+
+h2,
+h1 {
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.03em;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+input[type="submit"],
+.button {
+  width: 100%;
+  background: #047857;
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  padding: 14px 0;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+
+input[type="submit"]:hover,
+.button:hover {
+  background: #059669;
+}
+
+a {
+  color: #0e7490;
+  text-decoration: none;
+  font-size: 0.96rem;
+}
+
+a:hover {
+  text-decoration: underline;
+}
