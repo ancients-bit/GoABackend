@@ -1,15 +1,22 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  password: "1234567"
-  host: localhost
   pool: 5
 
 development:
   <<: *default
   database: GoAbackend_dev
+  username: postgres
+  password: "1234567"
+  host: localhost
 
 test:
   <<: *default
   database: GoAbackend_test
+  username: postgres
+  password: "1234567"
+  host: localhost
+
+production:
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
