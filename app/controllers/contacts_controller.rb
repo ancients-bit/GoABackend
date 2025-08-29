@@ -11,6 +11,11 @@ class ContactsController < ApplicationController
   private
 
   def contact_params
-    params.require(:contact).permit(:full_name, :email, :message, :organisation, :phone_number, :subject)
+    permitted = [:full_name, :email, :message, :organisation, :phone_number, :subject]
+    if params[:contact].is_a?(ActionController::Parameters)
+      params.require(:contact).permit(*permitted)
+    else
+      params.permit(*permitted)
+    end
   end
 end

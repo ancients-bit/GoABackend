@@ -32,17 +32,23 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(
+    permitted = [
       :name,
       :email,
       :phone_number,
-      :organisation,       # Use :organisation if your DB uses British spelling
+      :organisation,
       :number_of_persons,
       :date_of_booking,
       :alternate_date,
       :inquiry,
       :service
-    )
+    ]
+    # Accept both nested and flat JSON payloads
+    if params[:booking].is_a?(ActionController::Parameters)
+      params.require(:booking).permit(*permitted)
+    else
+      params.permit(*permitted)
+    end
   end
 
   def booking_update_params

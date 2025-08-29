@@ -14,6 +14,10 @@ class SubscribersController < ApplicationController
   private
 
   def subscriber_params
-    params.require(:subscriber).permit(:email)
+    if params[:subscriber].is_a?(ActionController::Parameters)
+      params.require(:subscriber).permit(:email)
+    else
+      params.permit(:email)
+    end
   end
 end

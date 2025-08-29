@@ -20,4 +20,7 @@ Rails.application.routes.draw do
 
   # 📩 Public contact form submission
   resources :contacts, only: [:create]
+
+  # 🩺 Health/root
+  root to: 'health#index'
 end
