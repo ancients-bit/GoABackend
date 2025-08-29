@@ -1,4 +1,4 @@
-class NewsletterJob < ApplicationJob
+class ::NewsletterJob < ApplicationJob
   queue_as :default
 
   def perform(*_args)
