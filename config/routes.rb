@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     get 'dashboard', to: 'dashboard#index'
     resources :bookings, only: [:create, :index, :update]
     resources :blog_posts, only: [:index, :create, :update, :destroy, :show]
+    resources :contacts, only: [:index, :show, :new, :edit, :create, :update, :destroy]
   end
 
   # 🌐 Public routes
