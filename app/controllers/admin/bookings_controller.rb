@@ -1,7 +1,5 @@
 module Admin
   class BookingsController < ApplicationController
-    before_action :authenticate_admin_user!
-
     def index
       bookings = Booking.order(created_at: :desc)
       render json: bookings

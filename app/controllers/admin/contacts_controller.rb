@@ -1,7 +1,5 @@
 module Admin
   class ContactsController < ApplicationController
-    before_action :authenticate_admin!
-
     def index
       contacts = Contact.all.order(created_at: :desc)
       render json: contacts.map { |contact| serialize_contact(contact) }
