@@ -8,6 +8,9 @@ Devise.setup do |config|
       ['DELETE', %r{^/admin/sessions$}]
     ]
     jwt.expiration_time = 30.minutes.to_i
+    jwt.request_formats = {
+      admin_user: [:json]
+    }
   end
 end
 
