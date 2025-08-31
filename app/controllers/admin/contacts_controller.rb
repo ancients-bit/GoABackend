@@ -1,6 +1,6 @@
 module Admin
   class ContactsController < ApplicationController
-    before_action :authenticate_admin_user!
+    before_action :authenticate_admin!
 
     def index
       contacts = Contact.all.order(created_at: :desc)
@@ -47,7 +47,7 @@ module Admin
     private
 
     def contact_params
-      params.require(:contact).permit(:full_name, :email, :message, :organisation, :phone_number, :subject)
+      params.require(:contact).permit(:full_name, :email, :message, :organization, :phone_number, :subject)
     end
 
     def serialize_contact(contact)
@@ -56,7 +56,7 @@ module Admin
         full_name: contact.full_name,
         email: contact.email,
         phone_number: contact.phone_number,
-        organization: contact.organisation,  # Transform field name
+        organization: contact.organization,  # Fixed field name
         subject: contact.subject,
         message: contact.message,
         created_at: contact.created_at,

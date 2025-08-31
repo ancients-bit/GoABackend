@@ -10,6 +10,8 @@ gem 'pg', '~> 1.4'
 gem 'rack-cors'
 # gem 'activeadmin'
 gem 'devise'
+gem 'jwt'
+gem 'devise-jwt'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"

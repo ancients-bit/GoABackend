@@ -14,6 +14,12 @@ Rails.application.routes.draw do
     resources :contacts, only: [:index, :show, :new, :edit, :create, :update, :destroy]
   end
 
+  # 🆕 Custom sessions routes wrapped in devise_scope for Devise compatibility
+  devise_scope :admin_user do
+    post '/admin/sessions', to: 'admin/sessions#create'
+    delete '/admin/sessions', to: 'admin/sessions#destroy'
+  end
+
   # 🌐 Public routes
   resources :bookings, only: [:create, :index, :update]
   resources :subscribers, only: [:create]

@@ -5,7 +5,7 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     resource '*',
       headers: :any,
       methods: [:get, :post, :patch, :put, :delete, :options, :head],
-      expose: ['Authorization', 'Content-Type', 'X-Requested-With'],
+      expose: ['Authorization', 'Content-Type', 'X-Requested-With', 'Set-Cookie'],
       credentials: true,
       max_age: 86400
   end
